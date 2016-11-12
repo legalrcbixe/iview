@@ -1,0 +1,22 @@
+глобальный белый список
+      если update.message.chat_id == dev_chat:242634207
+          если  Len (арг) ==  1  и Utilities.is_con_to_int (арг [ 0 ]):
+ - Bot.sendMessage ( chat_id = INT ( ул (линия) .strip ( ' \ п ' )),
+ -                             Текст = " Der Bot IST Wegen Wartungsarbeiten für {} Stunde (п) Nicht erreichbar! " .format (
+ -                                 INT (арг [ 0 ])))
+ -         Элиф  Len (арг) <=  1 :
+ +             С  открытым (res_dir +  ' whitelist.conf ' ) в белый список:
+ +                 Для I, строка в  Перечислять (белый список):
+ + Bot.sendMessage ( chat_id = INT ( ул (линия) .strip ( ' \ п ' )), текст = " Der Bot IST Wegen Wartungsarbeiten für {} Stunde (п) Nicht erreichbar! " .format ( INT (арг [ 0 ])))
+ +
+ +         Элиф  Len (арг) > =  1 :
+              maint_message =  "  " .join (арг)
+ - Bot.sendMessage ( chat_id = INT ( ул (линия) .strip ( ' \ п ' )), текст = maint_message)
+ +             С  открытым (res_dir +  ' whitelist.conf ' ) в белый список:
+ +                 Для I, строка в  Перечислять (белый список):
+ + Bot.sendMessage ( chat_id = INT ( ул (линия) .strip ( ' \ п ' )), текст = maint_message)
+ +         Еще :
+ + Bot.sendMessage ( chat_id = dev_chat, текст = " Что - то пошло не так » )
+  
+  
+  Защиту  SafeMode ( бот , обновление ):
